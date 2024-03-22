@@ -1,7 +1,5 @@
-# Web Extension for Online Sentiment Detection
-## Andrew Burton, Kyle West, Aneel Parmar
-### Computer Science 571 - Winter 2024
-#### Design and implementation of Database Systems
+
+q
 
  This repository contains a web extension designed to score Reddit users emotions in posts and comments in order to inform users about toxic online behaviour.
 
