@@ -1,0 +1,27 @@
+{
+ 
+    "manifest_version": 2,
+    "name": "CCCP Reddit Extension",
+    "version": "2.0",
+   
+    "description": "Rate emotion score of reddit users",
+   
+    "background": {
+      "scripts": ["background.js"]
+    },
+   
+    "permissions": [
+        "webNavigation",
+        "storage",
+        "activeTab",
+        "tabs",
+        "*://*.reddit.com/"
+    ],
+   
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Browse Time",
+      "default_popup": "view.html"
+    }
+   
+  }
