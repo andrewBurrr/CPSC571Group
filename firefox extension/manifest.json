@@ -4,20 +4,13 @@
     "version": "0.1",
     "description": "Rate emotion score of reddit users",
     "permissions": [
-        "storage",
-        "activeTab",
-        "tabs"
+        "activeTab"
     ],
     "host_permissions": ["*://*.reddit.com/"],
-    "background": {
-      "scripts": ["background.js"]
-    },
     "content_scripts": [
         {
             "matches": ["*://*.reddit.com/r/*/comments/*"],
-            "js": ["custom_script.js"]
+            "js": ["content.js"]
         }
     ]
 }
-
-// https://github.com/mdn/webextensions-examples/tree/main/dnr-redirect-url
