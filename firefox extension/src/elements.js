@@ -1,3 +1,5 @@
+import { isMouseOverButtonOrHoverCard } from './utils.js';
+
 /**
  * Creates a <style> element with the provided CSS string data and appends it to the document head.
  * @param {string} style - The CSS styles to apply
@@ -16,14 +18,10 @@ const createHoverCardElement = () => {
     const hoverCard = document.createElement('div');
     hoverCard.className = 'my-hover-card';
 
-    hoverCard.addEventListener('mouseover', () => {
-        hoverCard.style.display = 'flex';
-    });
-
-    hoverCard.addEventListener('mouseout', (event) => {
-        if (!isMouseOverButtonOrHoverCard(event)) {
+    hoverCard.addEventListener('mouseleave', () => {
+        setTimeout(() => {
             hoverCard.style.display = 'none';
-        }
+        }, 300);
     });
 
     return hoverCard;
@@ -42,3 +40,5 @@ const createButtonElement = (userComment, onClick) => {
 
     userComment.parentNode.insertBefore(button, userComment.nextSibling);
 }
+
+export { createStyleElement, createHoverCardElement, createButtonElement };

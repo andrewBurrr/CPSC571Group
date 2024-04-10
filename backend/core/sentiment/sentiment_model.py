@@ -2,10 +2,7 @@ import numpy as np
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
 
-
-class SentimentModel:
-    _instance = None
-    id2label = {
+id2label = {
         0: 'admiration',
         1: 'amusement',
         2: 'anger',
@@ -36,6 +33,10 @@ class SentimentModel:
         27: 'neutral'
     }
 
+
+class SentimentModel:
+    _instance = None
+
     def __new__(cls, model_path):
         if cls._instance is None:
             cls._instance = super(SentimentModel, cls).__new__(cls)
@@ -52,5 +53,5 @@ class SentimentModel:
         sigmoid = torch.nn.Sigmoid()
         probs = sigmoid(outputs.logits[0].cpu())
         probs_detach = probs.detach().numpy()
-        predictions = {self.id2label[i]: probs_detach[i] for i in range(len(probs_detach))}
+        predictions = {id2label[i]: probs_detach[i] for i in range(len(probs_detach))}
         return predictions

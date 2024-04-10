@@ -409,3 +409,4 @@ FodyWeavers.xsd
 /backend/core/sentiment/team-5-head-distilbert-base-uncased-go-emotion/
 /backend/core/.env
 *.sqlite3
+/firefox extension/dist/
