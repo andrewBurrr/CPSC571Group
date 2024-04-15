@@ -63,12 +63,12 @@ Follow these steps to clone and run this project
    python manage.py runserver
    ```
 5. **Install npm Dependencies**
-    From the `firefox extension` directory, you will need to run the following command:
+    From the `web extension` directory, you will need to run the following command:
     ```shell
     npm install
     ```
 6. **Run the Web Extension**
-    To build the web extension alongside its dependencies, run the following command from the `firefox extension` directory:
+    To build the web extension alongside its dependencies, run the following command from the `web extension` directory:
     ```shell
     npm run build
     ```
@@ -76,7 +76,7 @@ Follow these steps to clone and run this project
 ## Updates to Models (Backend)
 When updating a model, the following steps should be taken:
 1. Clean-up:
-    Delete the `*/uprojects/backend/db.sqlite3` file
+    Delete the `*/backend/core/db.sqlite3` file
 2. Re-make all migrations:
     Navigate to `*/backend/core/` and run the following commands:
     ```bash
@@ -90,16 +90,31 @@ When updating a model, the following steps should be taken:
 
 ## Updates to Web Extension (Frontend)
 When updating the web extension, the following steps should be taken:
-1. Run the following command from the `firefox extension` directory:
+1. Run the following command from the `web extension` directory:
     ```shell
     npm run build
     ```
-2. Navigate to `about:debugging` in Firefox
-3. Click on `This Firefox` and then `Load Temporary Add-on...`
-4. Navigate to the `firefox extension` directory and select the `manifest.json` file
-### OR for chrome
-1. Navigate to `chrome://extensions/` in Chrome
-2. Enable `Developer mode`
-3. Click on `Load unpacked` and navigate to the `firefox extension` directory
-4. Select the `manifest.json` file
-5. The extension should now be updated
+## How to load the extensison
+Once you have everything setup by this point now it's time to load the extension.
+# For Firefox (We need to change some permissions in the manifest so currently this doesn't work)
+1. **Open your browser and navigate to:**
+    `about:debugging#/runtime/this-firefox`
+2. **Under Temporary Extensions Click Load Temporary Add-on**
+    select the `~/web extension/manifest.json` file for this project and load it.
+3. **Navigate to Reddit.com and enable to extension in the extension toolbar**
+
+4. **Congratulations you're now running the extension**
+
+
+# For Chrome
+1. **Open your browser and navigate to:**
+    `chrome://extensions`
+
+2. **Enable Developer Mode by toggling the switch next to Developer Mode**
+
+3. **Click the load unpacked button**
+    Select the `~/web extension/manifest.json` file for this project and load it.
+
+3. **Navigate to Reddit.com and enable to extension in the extension toolbar**
+
+4. **Congratulations you're now running the extension**

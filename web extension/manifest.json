@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "CCCP Reddit Extension",
+    "name": "Reddit Emotional Scoring Extension",
     "version": "0.1",
     "description": "Rate emotion score of reddit users",
     "permissions": [
