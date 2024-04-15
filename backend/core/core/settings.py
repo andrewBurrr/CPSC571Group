@@ -20,6 +20,8 @@ REDDIT_CLIENT_ID = env('REDDIT_CLIENT_ID')
 REDDIT_CLIENT_SECRET = env('REDDIT_CLIENT_SECRET')
 REDDIT_USER_AGENT = env('REDDIT_USER_AGENT')
 
+MODEL = env('MODEL')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

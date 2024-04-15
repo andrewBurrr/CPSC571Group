@@ -16,7 +16,7 @@ from .sentiment_model import SentimentModel, id2label
 class RecentCommentsAPIView(APIView):
     def __init__(self):
         super().__init__()
-        self.sentiment_model = SentimentModel(model_path='./sentiment/team-5-head-distilbert-base-uncased-go-emotion')
+        self.sentiment_model = SentimentModel(model_path=f'./sentiment/{settings.MODEL}')
 
     def get(self, request):
         username = request.query_params.get('username', None)

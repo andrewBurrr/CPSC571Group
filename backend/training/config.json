@@ -1,0 +1,16 @@
+{
+  "dataset": "go_emotions",
+  "task": "multi_label_classification",
+  "checkpoints": [
+    "google/mobilebert-uncased",
+    "microsoft/deberta-v3-base"
+  ],
+  "seed": 42,
+  "max_seq_length": 50,
+  "threshold": 0.5,
+  "train_batch_size": 16,
+  "eval_batch_size": 32,
+  "num_epochs": 5,
+  "learning_rate": 5e-5,
+  "weight_decay": 0.01
+}
