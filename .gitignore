@@ -401,6 +401,12 @@ FodyWeavers.xsd
 /backend/venv/
 /frontend/build/
 /backend/.DS_Store
+/backend/core/sentiment/migrations/*
+/backend/training/.ipynb_checkpoints/*
 /backend/training/results/*
 /backend/training/runs/*
 /backend/training/team_5_head_model/*
+/backend/core/sentiment/team-5-head-distilbert-base-uncased-go-emotion/
+/backend/core/.env
+*.sqlite3
+/firefox extension/dist/
